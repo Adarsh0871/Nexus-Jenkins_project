@@ -5,16 +5,13 @@
                              http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <!-- Web Application Display Name -->
     <display-name>My Web Application</display-name>
 
-    <!-- Welcome File List -->
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!-- Example Servlet Configuration -->
     <servlet>
         <servlet-name>ExampleServlet</servlet-name>
         <servlet-class>com.example.ExampleServlet</servlet-class>
@@ -24,44 +21,9 @@
         <url-pattern>/example</url-pattern>
     </servlet-mapping>
 
-    <!-- JSP Configuration -->
-    <jsp-config>
-        <taglib>
-            <taglib-uri>http://example.com/tags</taglib-uri>
-            <taglib-location>/WEB-INF/tld/example.tld</taglib-location>
-        </taglib>
-    </jsp-config>
-
-    <!-- Error Page Configuration -->
     <error-page>
         <error-code>404</error-code>
         <location>/error404.jsp</location>
     </error-page>
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/error.jsp</location>
-    </error-page>
-
-    <!-- Security Configuration -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>Protected Area</web-resource-name>
-            <url-pattern>/admin/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>admin</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <!-- Context Parameters -->
-    <context-param>
-        <param-name>configFile</param-name>
-        <param-value>/WEB-INF/config.properties</param-value>
-    </context-param>
-
-    <!-- Session Configuration -->
-    <session-config>
-        <session-timeout>30</session-timeout>
-    </session-config>
 
 </web-app>
